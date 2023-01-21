@@ -16,7 +16,7 @@ def acc(v,z):
     return -a*v+b
 
 
-N=20000
+N=50000
 dt=0.001
 z=np.zeros(N)
 z[0]=0
@@ -48,5 +48,6 @@ print(zt(t0))
 fig,(ax1,ax2)=plt.subplots(2)
 ax1.plot(t,z)
 ax2.plot(t,vz)
+ax2.axhline(y=b/a,xmin=0,xmax=t[N-1],color='r')
 plt.show()
 
